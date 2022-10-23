@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    background-color: azure;
+    margin: 0px;
+}
+.calculatorBody {
+    background-color: #5a546e;
+    flex: 1 1 auto;
+    padding: 20px;
+    width: 500px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 75px;
+}
+
+.topFlavour {
+    background-color: #5a546e;
+    height: 111px;
+    width: 500px;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Goldman", sans-serif;
+    font-weight: 550;
+    color: #f5f5f5;
+}
+
+.leftFlavour {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.topText {
+    width: 100%;
+    flex: 1 0 auto;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.bottomText {
+    width: 100%;
+    flex: 1 0 auto;
+    font-size: 15px;
+}
+
+.solarCell {
+    flex: 5 0 0;
+    height: 100%;
+    background-color: #866650;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.singleCell {
+    flex: 1 0 1;
+    height: 100%;
+    width: 100%;
+    background-color: #866650;
+    border-color: #a3977f;
+    border-width: 1px;
+    padding: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.screen {
+    background-color: #92BA92;
+    height: 111px;
+    width: 500px;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 80px;
+    font-family: 'Silkscreen', cursive;
+    text-align: right;
+    
+}
+
+.specialButtons {
+    background-color: #5a546e;
+    height: 111px;
+    width: 500px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.regularButtons {
+    background-color: #5a546e;
+    width: 500;
+    height: 333px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.regularButtons button {
+    flex: 1 1 auto;
+    width: 105px;
+    height: 79px;
+    color: #f5f5f5
+    }
+
+.specialButtons button {
+    color: #f5f5f5;
+    flex: 1 1 auto;
+    width: 118px;
+    height: 79px;
+}
+
+button {
+    background-color: #363138;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: 3px;
+    border: none;
+    font-size: 30px;
+    font-family: "Goldman", sans-serif;
+}
+.clear,
+.delete {
+    background-color: #e777a5;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    margin-left: 30px;
+}
+

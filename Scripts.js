@@ -1,6 +1,5 @@
 const numButtons = document.querySelectorAll(".NUM");
 const operatorButtons = document.querySelectorAll(".OPERATOR");
-const buttonDecimal = document.querySelectorAll('.decimal')[0];
 const buttonClear = document.querySelectorAll('.clear')[0];
 const buttonDelete = document.querySelectorAll('.delete')[0];
 const valueDisplay = document.querySelectorAll('.screen')[0];
@@ -24,20 +23,31 @@ buttonMakeNegative.addEventListener('click', () => makeNegative());
 function numberAction(numButton) {
     if (operatorChosen === true) {
         workingValue = "";
-        operatorChosen === false;
+        operatorChosen = false;
     }
     workingValue += numButton.textContent;
     if (numButton.textContent === "." && numOfDecimals>0) {
         alert("Only one decimal point!");
         workingValue = workingValue.slice(0,-1);
+        numOfDecimals -= 1;
     };
     if (numButton.textContent === ".") {numOfDecimals += 1};
+    if (workingValue.length > 8) {
+        workingValue = workingValue.slice(0,8);
+    }
+    if (workingValue.slice(7,8) === ".") {
+        console.log("usao");
+        workingValue = workingValue.slice(0,7);
+    }
     screenValue = workingValue;
     valueDisplay.textContent = screenValue;
 }
 
 function deleteAction() {
     if (workingValue.length === 1 || workingValue.length === 0) {workingValue = "00"};
+    if (workingValue.slice(workingValue.length -1, workingValue.length) === ".") {
+        numOfDecimals -= 1;
+    }
     workingValue = workingValue.slice(0,-1);
     screenValue = workingValue;
     valueDisplay.textContent = screenValue;
@@ -78,7 +88,7 @@ function operatorAction(operatorButton) {
         } else if (previousOperator === "/") {
             if (workingValue === "0") {
                 clearAction();
-                valueDisplay.textContent = "∞";
+                valueDisplay.textContent = "ERROR: ∞";
                 return;
             }
             memoryValue /= parseFloat(workingValue);
@@ -86,7 +96,11 @@ function operatorAction(operatorButton) {
             workingValue = screenValue;
             memoryValue = screenValue;
         }
-        screenValue = memoryValue;
+        screenValue = memoryValue.toString();
+        if (screenValue.length > 8) {
+            screenValue = screenValue.slice(0,8);
+        }
+        console.log(screenValue);
         valueDisplay.textContent = screenValue;
     }
     if (previousOperator === "") {

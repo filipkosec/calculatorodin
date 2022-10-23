@@ -6,29 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <script type="text/javascript" src="Scripts.js" defer></script>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Share&family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class = "NUM">1</button>
-    <button class = "NUM">2</button>
-    <button class = "NUM">3</button>
-    <button class = "NUM">4</button>
-    <button class = "NUM">5</button>
-    <button class = "NUM">6</button>
-    <button class = "NUM">7</button>
-    <button class = "NUM">8</button>
-    <button class = "NUM">9</button>
-    <button class = "NUM">0</button>
-    <button class = "NUM">.</button>
-    <button class = "makeNegative">(-)</button>
-    <button class = "OPERATOR">+</button>
-    <button class = "OPERATOR">-</button>
-    <button class = "OPERATOR">*</button>
-    <button class = "OPERATOR">/</button>
-    <button class = "OPERATOR">=</button>
-
-    <button class = "clear">CLEAR</button>
-    <button class = "delete">DELETE</button>
-
-    <div class = "screen">0</div>
+    <div class = "calculatorBody">
+        <div class="topFlavour">
+            <div class = "leftFlavour">
+                <p class = "topText">OISAC</p>
+                <p class = "bottomText">SolTron 100</p>
+            </div>
+            <div class = "solarCell">
+                <div class = "singleCell"></div>
+                <div class = "singleCell"></div>
+                <div class = "singleCell"></div>
+                <div class = "singleCell"></div>
+                <div class = "singleCell"></div>
+                <div class = "singleCell"></div>
+            </div>
+        </div>
+        <div class = "screen">0</div>
+        <div class = "specialButtons">
+            <button class = "clear">CLEAR</button>
+            <button class = "delete">DELETE</button>
+            <button class = "makeNegative">(-)</button>
+        </div>
+        <div class = "regularButtons">
+            <button class = "NUM">7</button>
+            <button class = "NUM">8</button>
+            <button class = "NUM">9</button>
+            <button class = "OPERATOR">/</button>
+            <button class = "NUM">4</button>
+            <button class = "NUM">5</button>
+            <button class = "NUM">6</button>
+            <button class = "OPERATOR">*</button>
+            <button class = "NUM">1</button>
+            <button class = "NUM">2</button>
+            <button class = "NUM">3</button>
+            <button class = "OPERATOR">-</button>
+            <button class = "NUM">0</button>
+            <button class = "NUM">.</button>
+            <button class = "OPERATOR">=</button>
+            <button class = "OPERATOR">+</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright Filip Košec 2022.</p>
+        <a href ="https://github.com/filipkosec/calculatorodin"><img src="GitHub-Mark-64px.png" alt = "Github logo"></a>
+    </div>
 </body>
 </html>
